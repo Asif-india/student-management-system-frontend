@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme CSS Variables - Design Tokens */
+:root {
+  /* Light Mode Colors */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f9fafb;
+  --color-bg-tertiary: #f3f4f6;
+  
+  --color-surface-primary: #ffffff;
+  --color-surface-secondary: #f9fafb;
+  --color-surface-elevated: #ffffff;
+  
+  --color-border-primary: #e5e7eb;
+  --color-border-secondary: #d1d5db;
+  
+  --color-text-primary: #111827;
+  --color-text-secondary: #6b7280;
+  --color-text-tertiary: #9ca3af;
+  --color-text-muted: #d1d5db;
+  
+  --color-accent-primary: #3b82f6;
+  --color-accent-hover: #2563eb;
+  --color-accent-muted: rgba(59, 130, 246, 0.1);
+  
+  --color-success-bg: #dcfce7;
+  --color-success-text: #166534;
+  --color-success-border: #86efac;
+  
+  --color-warning-bg: #fef3c7;
+  --color-warning-text: #92400e;
+  --color-warning-border: #fcd34d;
+  
+  --color-error-bg: #fee2e2;
+  --color-error-text: #991b1b;
+  --color-error-border: #fca5a5;
+}
+
+.dark {
+  /* Dark Mode Colors - Professional SaaS Palette */
+  --color-bg-primary: #0a0a0b;
+  --color-bg-secondary: #131314;
+  --color-bg-tertiary: #1a1a1b;
+  
+  --color-surface-primary: #131314;
+  --color-surface-secondary: #18181a;
+  --color-surface-elevated: #1c1c1e;
+  
+  --color-border-primary: #27272a;
+  --color-border-secondary: #323235;
+  
+  --color-text-primary: #fafafa;
+  --color-text-secondary: #a1a1aa;
+  --color-text-tertiary: #71717a;
+  --color-text-muted: #52525b;
+  
+  --color-accent-primary: #3b82f6;
+  --color-accent-hover: #2563eb;
+  --color-accent-muted: rgba(59, 130, 246, 0.15);
+  
+  --color-success-bg: rgba(34, 197, 94, 0.15);
+  --color-success-text: #4ade80;
+  --color-success-border: rgba(34, 197, 94, 0.3);
+  
+  --color-warning-bg: rgba(234, 179, 8, 0.15);
+  --color-warning-text: #facc15;
+  --color-warning-border: rgba(234, 179, 8, 0.3);
+  
+  --color-error-bg: rgba(239, 68, 68, 0.15);
+  --color-error-text: #f87171;
+  --color-error-border: rgba(239, 68, 68, 0.3);
+}
+
+/* Smooth Theme Transitions */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Disable transitions for theme toggle button to prevent flickering */
+.theme-toggle *, .theme-toggle *::before, .theme-toggle *::after {
+  transition: none !important;
+}
